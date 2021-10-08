@@ -9,7 +9,7 @@ export class UsersController {
 
   @Post()
   signup(@Body() signupUserDto: SignupUserDto) {
-    return this.usersService.create(signupUserDto);
+    return this.usersService.signup(signupUserDto);
   }
 
   @Post()

@@ -1,26 +1,14 @@
 import { Injectable } from '@nestjs/common';
+import { SigninUserDto } from './dto/signin-user.dto';
 import { SignupUserDto } from './dto/signup-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
-  create(signupUserDto: SignupUserDto) {
-    return 'This action adds a new user';
+  signin(signinUserDto: SigninUserDto) {
+    return 'This action returns authentication token for user';
   }
 
-  findAll() {
-    return `This action returns all users`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
-  }
-
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  signup(signinUserDto: SignupUserDto) {
+    return 'This action returns created user';
   }
 }
